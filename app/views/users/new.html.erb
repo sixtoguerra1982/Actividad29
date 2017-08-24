@@ -1,0 +1,24 @@
+<h2>Nuevo Usuario</h2>
+
+<%= form_with(model: @user, local: true) do |f| %>
+  
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, id: :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, id: :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "off", id: :password %>
+  </div>
+
+ <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+
+<% end %>
